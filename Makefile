@@ -5,7 +5,7 @@ PFM := /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_4_1_202210_1/xilinx_u250_g
 NCPUS := $(shell grep -c ^processor /proc/cpuinfo)
 JOBS := $(shell expr $(NCPUS) - 1)
 
-VISION_LIB_FLAGS := -I. -I./Vitis_Libraries/vision/L1/include --config vision_config.ini
+VISION_LIB_FLAGS := -I. -I/mnt/scratch/rhyhuo/Vitis_Libraries/vision/L1/include --config vision_config.ini
 
 VPPFLAGS := --platform $(PFM) -t $(TARGET) -s -g
 VPPLFLAGS := --jobs $(JOBS) --config profile.ini
