@@ -10,7 +10,7 @@ VISION_LIB_FLAGS := -I. -I/mnt/scratch/rhyhuo/Vitis_Libraries/vision/L1/include 
 VPPFLAGS := --platform $(PFM) -t $(TARGET) -s -g
 VPPLFLAGS := --jobs $(JOBS) --config profile.ini
 
-BOARD_CONFIG := connectivity_u200.ini
+BOARD_CONFIG := connectivity_u250.ini
 ifeq (u250, $(findstring u250, $(PLATFORM)))
 	BOARD_CONFIG := connectivity_u250.ini
 endif
